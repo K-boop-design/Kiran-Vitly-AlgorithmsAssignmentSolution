@@ -1,0 +1,7 @@
+Part 1 Solutions
+
+a) Θ(log₂(3))
+b) NA
+c) NA
+d) Θ(nlog(n))
+e) Θ(n^2)
