@@ -32,31 +32,39 @@ public class Driver {
 			System.out.println("__________");
 			operation=in.nextInt();
 			
-			if(operation==1) {
-				MergeSortImplA objA = new MergeSortImplA();
-				System.out.println("Stock prices in ascending order are :");
-				objA.getCompany(company);
-				objA.mergeSort(0, companyCount-1);
-				 objA.display();
+			switch(operation) {
+				case 1:{
+					MergeSortImplA objA = new MergeSortImplA();
+					System.out.println("Stock prices in ascending order are :");
+					objA.getCompany(company);
+					objA.mergeSort(0, companyCount-1);
+					objA.display();
+					break;
+				}
+				case 2:{
+					MergeSortImplD objD = new MergeSortImplD();
+					System.out.println("Stock prices in descending order are :");
+					objD.getCompany(company);
+					objD.mergeSort(0, companyCount-1);
+					objD.display();
+					break;
+				}
+				case 3:{
+					System.out.println("Total no of companies whose stock price rose today :");
+					objW.stockPriceInc(company);
+					break;
+				}
+				case 4:{
+					System.out.println("Total no of companies whose stock price declined today :");
+					objW.stockPriceDec(company);
+					break;
+				}
+				case 5:{
+					objW.stockPriceSearch(company);
+					break;
+				}
 			}
-			if(operation==2) {
-				MergeSortImplD objD = new MergeSortImplD();
-				System.out.println("Stock prices in descending order are :");
-				objD.getCompany(company);
-				objD.mergeSort(0, companyCount-1);
-				objD.display();
-			}
-			if(operation==3) {
-				System.out.println("Total no of companies whose stock price rose today :");
-				objW.stockPriceInc(company);
-			}
-			if(operation==4) {
-				System.out.println("Total no of companies whose stock price declined today :");
-				objW.stockPriceDec(company);
-			}
-			if(operation==5) {
-				objW.stockPriceSearch(company);
-			}
+			
 		}
 		System.out.println("Exited successfully");
 		
